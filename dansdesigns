@@ -1,1 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dans Designs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #111;
+    }
+    h1, h2 {
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Dans Designs</h1>
+  <p>
+    Electrical and lighting design for commercial and residential projects.
+    Clear drawings, buildable layouts, and compliance-led design.
+  </p>
+
+  <h2>Services</h2>
+  <ul>
+    <li>Lighting design and calculations (Dialux)</li>
+    <li>Emergency lighting layouts and compliance</li>
+    <li>Small power and lighting layouts</li>
+    <li>Electrical design support and coordination</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <p>
+    Selected commercial and residential projects.
+    Full details available on request.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Email: info@dansdesigns.co.uk</p>
+  <p>United Kingdom</p>
+
+  <footer>
+    © Dans Designs
+  </footer>
+
+</body>
+</html>
 
