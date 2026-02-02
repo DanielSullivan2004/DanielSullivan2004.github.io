@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- --- Meta: encoding + mobile scaling (prevents zoom/spacing issues on phones) --- -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- --- Title/SEO: what shows in browser tab + helps search engines understand the page --- -->
   <title>Dans Designs | Electrical & Lighting Design (UK)</title>
   <meta name="description" content="Electrical and lighting design for commercial and residential projects across the UK. Clear drawings, buildable layouts, compliance-led design." />
 
   <style>
+    /* --- Theme: central colours so we can brand the whole site by changing values here --- */
     :root{
-      --accent: #f2c200; /* subtle yellow accent */
+      --accent: #f2c200;     /* yellow accent */
       --text: #111;
       --muted: #555;
       --border: #e6e6e6;
@@ -17,8 +20,10 @@
       --soft: #fafafa;
     }
 
+    /* --- Base reset: consistent layout sizing across browsers --- */
     * { box-sizing: border-box; }
 
+    /* --- Page base: global typography + background --- */
     body{
       margin: 0;
       background: var(--bg);
@@ -27,13 +32,14 @@
       line-height: 1.6;
     }
 
+    /* --- Main container: keeps content centred + readable width --- */
     .wrap{
       max-width: 980px;
       margin: 56px auto;
       padding: 0 20px;
     }
 
-    /* Top bar / brand */
+    /* --- Header: brand + navigation --- */
     .brand{
       display: flex;
       align-items: center;
@@ -43,6 +49,7 @@
       border-bottom: 1px solid var(--border);
     }
 
+    /* --- Logo block: yellow mark + name + tagline --- */
     .logo{
       display: flex;
       align-items: center;
@@ -70,6 +77,7 @@
       font-size: 14px;
     }
 
+    /* --- Navigation: section links for easy scrolling --- */
     .nav{
       display: flex;
       gap: 14px;
@@ -90,7 +98,7 @@
       background: var(--soft);
     }
 
-    /* Hero */
+    /* --- Hero: main headline + credibility chips --- */
     .hero{
       padding: 34px 0 10px;
     }
@@ -125,7 +133,7 @@
       border-radius: 999px;
     }
 
-    /* Sections */
+    /* --- Sections: consistent spacing + separators --- */
     section{
       padding: 26px 0;
       border-top: 1px solid var(--border);
@@ -153,7 +161,7 @@
       flex: 0 0 auto;
     }
 
-    /* Cards */
+    /* --- Grid + cards: used for Services, Projects, Contact --- */
     .grid{
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -179,32 +187,45 @@
       font-size: 14px;
     }
 
-    /* Projects block */
-    .project{
-      border: 1px dashed var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      background: var(--soft);
+    /* --- Projects: slightly different card content (meta + bullets) --- */
+    .project-meta{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card ul{
+      margin: 0;
+      padding-left: 18px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* Contact */
-    .contact{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-      align-items: start;
+    /* --- CTA button: simple “request examples / enquiry” --- */
+    .cta-row{
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .contact .box{
-      grid-column: span 6;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      background: #fff;
+    .btn{
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(242,194,0,0.55);
+      background: rgba(242,194,0,0.12);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
     }
 
+    .btn:hover{
+      border-color: rgba(242,194,0,1);
+      background: rgba(242,194,0,0.18);
+    }
+
+    /* --- Contact links: underline with accent so it feels branded --- */
     .contact a{
       color: var(--text);
       text-decoration: none;
@@ -215,7 +236,7 @@
       border-bottom-color: rgba(242,194,0,1);
     }
 
-    /* Footer */
+    /* --- Footer: small, clean, professional --- */
     footer{
       margin-top: 24px;
       padding-top: 18px;
@@ -224,12 +245,11 @@
       font-size: 13px;
     }
 
-    /* Responsive */
+    /* --- Responsive: stack cards on smaller screens --- */
     @media (max-width: 780px){
-      .card{ grid-column: span 12; }
-      .contact .box{ grid-column: span 12; }
-      .hero h2{ font-size: 28px; }
       .wrap{ margin: 34px auto; }
+      .hero h2{ font-size: 28px; }
+      .card{ grid-column: span 12; }
     }
   </style>
 </head>
@@ -237,6 +257,7 @@
 <body>
   <div class="wrap">
 
+    <!-- --- Header: brand + quick navigation links --- -->
     <header class="brand">
       <div class="logo">
         <div class="mark" aria-hidden="true"></div>
@@ -254,11 +275,12 @@
       </nav>
     </header>
 
+    <!-- --- Hero: top message (what you do + why someone should trust it) --- -->
     <div class="hero">
       <h2>Electrical & lighting design that’s clear, buildable, and compliant.</h2>
       <p>
-        I produce practical layouts and documentation for commercial and residential projects — designed to be
-        installed on site without drama, and checked against the standards that matter.
+        I produce practical layouts and documentation for commercial and residential projects —
+        designed to be installed on site without drama, and checked against the standards that matter.
       </p>
 
       <div class="chips" aria-label="Key qualities">
@@ -269,6 +291,7 @@
       </div>
     </div>
 
+    <!-- --- Services: what you offer (clear, non-salesy, engineer tone) --- -->
     <section id="services">
       <h2 class="section-title"><span class="dot" aria-hidden="true"></span>Services</h2>
 
@@ -295,14 +318,65 @@
       </div>
     </section>
 
+    <!-- --- Projects: credibility via anonymised examples (no client names) --- -->
     <section id="projects">
       <h2 class="section-title"><span class="dot" aria-hidden="true"></span>Projects</h2>
-      <div class="project">
-        Selected commercial and residential projects available on request.
-        If you want examples of lighting layouts, DB schedules, or coordination packs, email me and I’ll send a shortlist.
+
+      <p style="margin:0; color: var(--muted); max-width: 85ch;">
+        Below are example project types and deliverables. I keep client details confidential, but I can share
+        anonymised extracts (layouts, schedules, calculations) on request.
+      </p>
+
+      <div class="grid" style="margin-top: 12px;">
+        <div class="card">
+          <h3>Commercial office – lighting & emergency</h3>
+          <p class="project-meta">Deliverables: layouts, emergency coverage, coordination mark-ups</p>
+          <ul>
+            <li>General lighting layout and switching intent</li>
+            <li>Emergency lighting compliance layout</li>
+            <li>Coordination updates with reflected ceiling plans</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Residential / small schemes – power & lighting layouts</h3>
+          <p class="project-meta">Deliverables: buildable plans, circuit strategy, coordination</p>
+          <ul>
+            <li>Small power and lighting layouts</li>
+            <li>Practical circuiting and containment-friendly routing</li>
+            <li>Drawing mark-ups and issue packs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Refurb / survey-led work – as-built to design</h3>
+          <p class="project-meta">Deliverables: updated layouts, constraints handling, revisions</p>
+          <ul>
+            <li>Survey information converted into CAD layouts</li>
+            <li>Design adjustments around site constraints</li>
+            <li>Revisions tracked and issued cleanly</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>M&amp;E coordination – design support</h3>
+          <p class="project-meta">Deliverables: mark-ups, drawing reviews, coordination responses</p>
+          <ul>
+            <li>Review comments and clash/coordination responses</li>
+            <li>Updated drawings for issue packs</li>
+            <li>Consistent annotation and naming for traceability</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@dansdesigns.co.uk?subject=Dans%20Designs%20-%20Project%20Enquiry&body=Hi%20Dan%2C%0A%0AProject%20type%3A%20%0ALocation%3A%20%0AWhat%20you%20need%20(lighting%2Femergency%2Fpower%2Fcoordination)%3A%20%0ATimescales%3A%20%0AAny%20drawings%20or%20info%20to%20share%3A%20%0A%0AThanks%2C">
+          Request examples / enquiry
+        </a>
       </div>
     </section>
 
+    <!-- --- About: trust section (short, direct, not cringe) --- -->
     <section id="about">
       <h2 class="section-title"><span class="dot" aria-hidden="true"></span>About</h2>
       <p style="margin:0; color: var(--muted); max-width: 80ch;">
@@ -311,28 +385,32 @@
       </p>
     </section>
 
-    <section id="contact">
+    <!-- --- Contact: how to reach you (clear instructions = better enquiries) --- -->
+    <section id="contact" class="contact">
       <h2 class="section-title"><span class="dot" aria-hidden="true"></span>Contact</h2>
 
-      <div class="contact">
-        <div class="box">
-          <strong>Email</strong><br>
-          <a href="mailto:info@dansdesigns.co.uk">info@dansdesigns.co.uk</a>
-          <p style="margin:10px 0 0; color: var(--muted); font-size: 14px;">
-            Tell me the project type, location, and what you need (lighting / emergency / power layouts / coordination).
+      <div class="grid">
+        <div class="card">
+          <h3>Email</h3>
+          <p style="margin:0 0 10px;">
+            <a href="mailto:info@dansdesigns.co.uk">info@dansdesigns.co.uk</a>
+          </p>
+          <p style="margin:0; color: var(--muted); font-size: 14px;">
+            Send the project type, location, what you need (lighting / emergency / power / coordination), and timescales.
           </p>
         </div>
 
-        <div class="box">
-          <strong>Location</strong><br>
-          United Kingdom
-          <p style="margin:10px 0 0; color: var(--muted); font-size: 14px;">
+        <div class="card">
+          <h3>Location</h3>
+          <p style="margin:0 0 10px;">United Kingdom</p>
+          <p style="margin:0; color: var(--muted); font-size: 14px;">
             Remote delivery available. Drawings issued in clean PDF / CAD-ready formats.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- --- Footer: small copyright line (professional finish) --- -->
     <footer>
       © 2026 Dans Designs
     </footer>
