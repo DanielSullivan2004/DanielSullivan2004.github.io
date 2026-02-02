@@ -201,13 +201,15 @@
       font-size: 14px;
     }
 
-    /* --- CTA button: simple “request examples / enquiry” --- */
-    .cta-row{
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+/* --- CTA row: holds primary actions (enquiry / projects links) --- */
+.cta-row{
+  margin-top: 20px;              /* space above CTAs so they don’t feel cramped */
+  display: flex;                 /* places buttons in a row */
+  gap: 12px;                     /* consistent spacing between buttons */
+  flex-wrap: wrap;               /* allows wrapping on small screens */
+  align-items: center;           /* keeps buttons vertically aligned */
+}
+
 
     .btn{
       display: inline-block;
