@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- --- Meta --- -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --- Title/SEO --- -->
+  <title>Projects | Dans Designs</title>
+  <meta name="description" content="Selected project examples and deliverables from Dans Designs (UK)." />
+
+  <style>
+    /* --- Keep the same theme so it matches the home page --- */
+    :root{
+      --accent: #f2c200;
+      --text: #111;
+      --muted: #555;
+      --border: #e6e6e6;
+      --bg: #ffffff;
+      --soft: #fafafa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 56px auto;
+      padding: 0 20px;
+    }
+
+    /* --- Simple header --- */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding-bottom:18px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .mark{
+      width:14px;height:14px;border-radius:4px;background:var(--accent);
+      box-shadow:0 0 0 3px rgba(242,194,0,0.18);
+    }
+
+    h1{ margin:0; font-size:22px; }
+    .tag{ margin:0; color:var(--muted); font-size:14px; }
+
+    a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(242,194,0,0.55);
+    }
+    a:hover{ border-bottom-color: rgba(242,194,0,1); }
+
+    /* --- Page title --- */
+    .hero{
+      padding: 28px 0 10px;
+    }
+    .hero h2{
+      margin:0 0 10px;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+    .hero p{
+      margin:0;
+      color: var(--muted);
+      max-width: 80ch;
+    }
+
+    /* --- Project cards --- */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top: 18px;
+    }
+    .card{
+      grid-column: span 6;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; }
+    .meta{ margin:0 0 10px; color:var(--muted); font-size:13px; }
+    .card ul{ margin:0; padding-left:18px; color:var(--muted); font-size:14px; }
+
+    footer{
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 780px){
+      .wrap{ margin: 34px auto; }
+      .card{ grid-column: span 12; }
+      .hero h2{ font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- --- Header --- -->
+    <header class="top">
+      <div class="logo">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Dans Designs</h1>
+          <p class="tag">Projects</p>
+        </div>
+      </div>
+
+      <!-- --- Back link --- -->
+      <div>
+        <a href="index.html">Back to home</a>
+      </div>
+    </header>
+
+    <!-- --- Page intro --- -->
+    <div class="hero">
+      <h2>Selected project examples</h2>
+      <p>
+        I keep client details confidential. These examples show typical deliverables and the type of work I support.
+        I can share anonymised extracts (layouts, schedules, calculations) on request.
+      </p>
+    </div>
+
+    <!-- --- Projects list --- -->
+    <div class="grid">
+      <div class="card">
+        <h3>Commercial office – lighting & emergency</h3>
+        <p class="meta">Layouts, emergency coverage, coordination mark-ups</p>
+        <ul>
+          <li>General lighting layout and switching intent</li>
+          <li>Emergency lighting compliance layout</li>
+          <li>Coordination updates with RCPs</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Residential / small schemes – power & lighting</h3>
+        <p class="meta">Buildable plans, sensible circuiting, issue packs</p>
+        <ul>
+          <li>Small power and lighting layouts</li>
+          <li>Practical routing and coordination</li>
+          <li>Drawing mark-ups and revisions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Refurb / survey-led work</h3>
+        <p class="meta">As-built constraints, revisions, updates</p>
+        <ul>
+          <li>Survey info converted into layouts</li>
+          <li>Design adjustments around site constraints</li>
+          <li>Clear revision control</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>M&amp;E coordination support</h3>
+        <p class="meta">Mark-ups, reviews, coordination responses</p>
+        <ul>
+          <li>Comment response and drawing reviews</li>
+          <li>Updated issue packs</li>
+          <li>Consistent annotation and naming</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Dans Designs
+    </footer>
+
+  </div>
+</body>
+</html>
 
